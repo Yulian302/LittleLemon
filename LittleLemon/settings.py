@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv(
     dotenv_path=Path(
-        '/.env.dev-littlelemon'
+        "/Users/yulianbohomol/PycharmProjects/LittleLemonProject/LittleLemon/.env.dev-littlelemon"
     )
 )
 
@@ -24,7 +24,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "restaurant",
-    'rest_framework',
+    "rest_framework",
+    "rest_framework.authtoken",
+    "djoser",
 ]
 
 MIDDLEWARE = [
@@ -68,6 +70,14 @@ DATABASES = {
     }
 }
 
+DJOSER = {"USER_ID_FIELD": "username"}
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ]
+}
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
