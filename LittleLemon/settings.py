@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv(
     dotenv_path=Path(
-        '/Users/yulianbohomol/PycharmProjects/LittleLemonProject/.env.dev-littlelemon'
+        '/.env.dev-littlelemon'
     )
 )
 
